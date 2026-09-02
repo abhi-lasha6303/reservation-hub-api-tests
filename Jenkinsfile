@@ -2,6 +2,16 @@ pipeline {
 
     agent any
 
+    environment {
+        BASE_URL = 'https://restful-booker.herokuapp.com'
+        TIMEOUT = '10'
+
+        BOOKER_CREDS = credentials('booker-credentials')
+
+        RH_USERNAME = "${BOOKER_CREDS_USR}"
+        RH_PASSWORD = "${BOOKER_CREDS_PSW}"
+    }
+
     stages {
 
         stage('Checkout') {

@@ -67,9 +67,9 @@ def created_booking(api, booking_payload):
     }
 
 
-# ---------------------------------------------------------------------------
+
 # HTML report: attach API request/response details
-# ---------------------------------------------------------------------------
+
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
